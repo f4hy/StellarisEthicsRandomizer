@@ -14,7 +14,9 @@ print("Content-type:text/html")
 print("")
 print("Hello <br/>")
 print(f"<span>Based on your empire name <b>{empire_name}</b><br/> ")
-hashed, required = generateRequiredEthic(empire_name, game_id)
+hashed, required, img = generateRequiredEthic(empire_name, game_id)
 print(f"we are using seed <b>{hashed}</b></span><br/><br/>")
-print(f"<span>You must play as: <b>{required}</b></span><br/><br/>")
+print(f"<span>You must play as: <b>{required}</b><img src='{img}'/></span><br/><br/>")
+
+
 print(""" <form action=".."> <input type="submit" value="Go Back" /> </form> """)
