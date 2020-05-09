@@ -28,8 +28,5 @@ def generateRequiredEthic(empire_name, game_id):
     key = empire_name + game_id
     hashed = hashlib.sha256(key.encode()).hexdigest()
     random.seed(int(hashed, 16))
-    print(
-        f"<span>Based on your empire name <b>{empire_name}</b> we are using seed <b>{hashed}</b></span><br/><br/>"
-    )
     required = random.choice(all_choices)
-    print(f"<span>You must play as: <b>{required}</b></span>")
+    return hashed, required

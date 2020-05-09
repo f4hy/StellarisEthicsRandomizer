@@ -1,0 +1,23 @@
+form {
+    font-size: 200%;
+}
+
+div.c {
+    font-size: 150%;
+}
+p {
+    margin: 40px;
+}
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 100%
+}

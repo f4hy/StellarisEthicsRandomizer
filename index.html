@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>
+      <h1>Enter info about your upcoming game.</h1>
+    </p>
+    <p>
+      <form action="cgi-bin/getData.py" method="post">
+        Empire Name: <input type="text" name="empire_name" required><br/>
+        Game Id: <input type="text" name="game_id" required><br/>
+        <input type="submit" value="Get Required Ethic">
+      </form>
+    </p>
+    <footer><p>This is meant to randomize the ethics for stellaris game. Given a game id
+        and empire name the choice is random but <i>deterministic</i>. This way players
+        do not have to reveal to others which ethics they must play, but upon meeting
+        in game one can verify a player obeyed the requirement. </p>
 
-form {
-  font-size: 200%;
-}
-
-div.c {
-  font-size: 150%;
-}
-</style>
-</head>
-<body>
-<div class="c">Enter info about your upcoming game.</div>
-<br></br>
-<form action="cgi-bin/getData.py" method="post">
-  Empire Name: <input type="text" name="empire_name">
-  Game Id: <input type="text" name="game_id">
-   <input type="submit" value="go">
-</form>
-
-</body>
+      <p>
+        author: Brendan Fahy
+      </p>
+      <footer>
+  </body>
 </html>
