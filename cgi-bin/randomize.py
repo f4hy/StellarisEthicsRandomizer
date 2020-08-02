@@ -33,5 +33,4 @@ def generateRequiredEthic(empire_name, game_id):
     hashed = hashlib.sha256(key.encode()).hexdigest()
     random.seed(int(hashed, 16))
     required = random.choice(list(ethics.keys()))
-    print(required)
     return hashed, required, ethics.get(required)

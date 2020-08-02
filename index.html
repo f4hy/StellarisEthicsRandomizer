@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <p>
-      <h1>Enter info about your upcoming game.</h1>
+<html lang='en'>
+<head>
+  <title>Stellaris Randomizer</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Please login with steam.</h1>
+  <form action="cgi-bin/steam_info.py" method="post">
+    <input type="submit" value="Login with Steam">
+  </form>
+  <footer>
+    <p>This is meant to randomize settings for a stellaris game. Players can
+    vote on game settings and settings will be randomly picked in the range
+    which players vote. Optionally one ethic for each player will be randomly
+    selected.  Given a game id and empire name the choice is random but
+    <i>deterministic</i>. This way players do not have to reveal to
+    others which ethics they must play, but upon meeting in game
+    one can verify a player obeyed the requirement.</p>
+    <p>author:
+      <a href= "https://github.com/f4hy/StellarisEthicsRandomizer">Brendan Fahy</a>
     </p>
-    <p>
-      <form action="cgi-bin/getData.py" method="post">
-        Empire Name: <input type="text" name="empire_name" required><br/>
-        Game Id: <input type="text" name="game_id" required><br/>
-        <input type="submit" value="Get Required Ethic">
-      </form>
-    </p>
-    <footer><p>This is meant to randomize the ethics for stellaris game. Given a game id
-        and empire name the choice is random but <i>deterministic</i>. This way players
-        do not have to reveal to others which ethics they must play, but upon meeting
-        in game one can verify a player obeyed the requirement. </p>
-
-      <p>
-        author: <a href=https://github.com/f4hy/StellarisEthicsRandomizer>Brendan Fahy</a>
-      </p>
-      <footer>
-  </body>
+  </footer>
+</body>
 </html>
