@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}results "{{ gameid }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<h2></h2>
+<hr/>
+<div>
+  <h1>{{ gameid }}</h1>
+  <hr>
+  <div class="Decision">Decision </div>
+  {% for k,(v, r) in votes.items() %}
+  <div class="Votes"> {{ k }}: <span style="color:DodgerBlue"><b> {{ v }}</b> </span> </div>   <div style='text-align:right'> Most voted for choices: {{ r }} </div>
+  {% endfor %}
+  <hr>
+  <br/><br/>
+  <hr>
+  {% for vote in raw %}
+  <div class="Votes">Votes By {{ vote["steamid"] }}</div>
+  <br/>
+  {% for k,v in vote.items() %}
+  <div class="Votes"> <b>{{ k }}</b>:  {{ v }} </div>
+  {% endfor %}
+  <hr>
+  {% endfor %}
+
+</div>
+<hr/>
+{% endblock %}

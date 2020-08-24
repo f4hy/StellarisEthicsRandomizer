@@ -12,12 +12,9 @@
     <article class="game">
       <header>
         <div>
-          <h1>{{ game['title'] }}</h1>
+          <h1><a class="action" href="{{ url_for('game.tally', id=game['gameid']) }}">{{ game['gameid'] }}</a></h1>
           <div class="about">by {{ game['steamid'] }} on {{ game['created'].strftime('%Y-%m-%d') }}</div>
         </div>
-        {% if g.user['id'] == game['author_id'] %}
-          <a class="action" href="{{ url_for('game.update', id=game['id']) }}">Edit</a>
-        {% endif %}
       </header>
       <p class="body">{{ game['body'] }}</p>
     </article>
